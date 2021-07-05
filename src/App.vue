@@ -1,13 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    
+<router-view></router-view>  
+<!-- tabbar -->
+   
+   <main-tab-bar></main-tab-bar>
+
   </div>
 </template>
 
-<style>
+<script>
+import MainTabBar from 'components/tabbar/MainTabBar.vue'
+
+export default {
+    components:{
+        MainTabBar,
+        
+    }
+}
+</script>
+
+<style lang="css">
+/* 用别名来写的路径 */
+@import url('assets/css/base.css');
+@import url('assets/css/myfont/css/all.css');
 
 </style>
+
+
