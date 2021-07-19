@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    
-<router-view></router-view>  
+      <!-- 首页内容不销毁 -->
+    <keep-alive>
+        <router-view></router-view>  
+    </keep-alive>
+
 <!-- tabbar -->
    
    <main-tab-bar></main-tab-bar>

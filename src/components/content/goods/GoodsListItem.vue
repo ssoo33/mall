@@ -1,10 +1,10 @@
 <template>
-    <div class="goods-list-item">
-        <a :href="goodsItem.link">
+    <div class="goods-list-item" @click="toDetail">
+        <!-- <a :href="goodsItem.link"> -->
             <img :src="goodsItem.img" alt="">
             <p>{{goodsItem.title}}</p>
             <span>￥{{goodsItem.price}}</span>
-        </a>
+        <!-- </a> -->
     </div>
 </template>
 
@@ -17,6 +17,13 @@
                 default () {
                     return {}
                 }
+            }
+        },
+        methods:{
+            toDetail(){
+                // 跳转到详情页
+                console.log("detail"+this.goodsItem.iid)
+                this.$router.push("/detail/"+this.goodsItem.iid)
             }
         }
     }

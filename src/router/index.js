@@ -5,6 +5,7 @@ const Home = ()=>import('views/home/Home.vue')
 const Categoty = ()=>import('views/category/Category.vue')
 const Car = ()=>import('views/car/Car.vue')
 const Profile = ()=>import('views/profile/Profile.vue')
+const Detail = ()=>import('views/detail/Detail.vue')
 
 Vue.use(VueRouter)
 
@@ -15,7 +16,11 @@ const routes = [
     },
     {
         path: '/home',
-        component:Home
+        component: Home,
+        meta: {
+            keepAlive: true,
+            isBack:false
+        }
     },
     {
         path: '/category',
@@ -28,6 +33,10 @@ const routes = [
     {
         path: '/profile',
         component:Profile
+    },
+    {
+        path: '/detail/:iid',
+        component:Detail
     }
 ]
 
